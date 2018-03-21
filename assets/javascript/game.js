@@ -1,3 +1,5 @@
+    $(document).ready(function () {    
+    
     // create variable to record game tally and current total
     var currentScore = 0;
     var winTally = 0;
@@ -12,16 +14,16 @@
     console.log(randomNum);
 
     //create four random numbers within range to be assigned to each book
-    book1 = Math.floor(Math.random() * (13 - 1)) + 1;
+    var book1 = Math.floor(Math.random() * (13 - 1)) + 1;
     console.log(book1);
-    book2 = Math.floor(Math.random() * (13 - 1)) + 1;
+    var book2 = Math.floor(Math.random() * (13 - 1)) + 1;
     console.log(book2);
-    book3 = Math.floor(Math.random() * (13 - 1)) + 1;
+    var book3 = Math.floor(Math.random() * (13 - 1)) + 1;
     console.log(book3);
-    book4 = Math.floor(Math.random() * (13 - 1)) + 1;
+    var book4 = Math.floor(Math.random() * (13 - 1)) + 1;
     console.log(book4);
 
-$(document).ready(function () {
+
 
     // reset the game
     function reset() {
@@ -33,16 +35,16 @@ $(document).ready(function () {
         console.log(book3);
         book4 = Math.floor(Math.random() * (13 - 1)) + 1;
         console.log(book4);
-        var randomNum = Math.floor(Math.random() * (121 - 19)) + 19;
+        randomNum = Math.floor(Math.random() * (121 - 19)) + 19;
         currentScore=0;
-        $("#finalTotal").text("");
-    }
-    $("#target").click(function() {
-        var randomNum = Math.floor(Math.random() * (121 - 19)) + 19;
         $("#randomNumber").text(randomNum);
-        console.log(randomNum);
+        $("#finalTotal").text(currentScore);
+    }
+
+    $("#target").click(function() {
         reset();
     });
+
     //create function to start on each click, accumulate the points and post it to the finalTotal for user to match to the random number
 
     $("#one").on('click', function () {
@@ -51,10 +53,8 @@ $(document).ready(function () {
         $('#finalTotal').text(currentScore);
         if (currentScore === randomNum) {
             win();
-            reset()
         } else if (currentScore > randomNum) {
             losses();
-            reset()
         }
     });
     $("#two").on('click', function () {
@@ -63,10 +63,8 @@ $(document).ready(function () {
         $('#finalTotal').text(currentScore);
         if (currentScore === randomNum) {
             win();
-            reset()
         } else if (currentScore > randomNum) {
-            losses();
-            reset()                    
+            losses();        
     }
     });
     $("#three").on('click', function () {
@@ -75,11 +73,9 @@ $(document).ready(function () {
         $('#finalTotal').text(currentScore);
         if (currentScore === randomNum) {
             win();
-            reset()
 
         } else if (currentScore > randomNum) {
             losses();
-            reset()
         }
 
     });
@@ -89,10 +85,8 @@ $(document).ready(function () {
         $('#finalTotal').text(currentScore);
         if (currentScore === randomNum) {
             win();
-            reset()
         } else if (currentScore > randomNum) {
             losses();
-            reset()
         }
     });
 
@@ -101,7 +95,7 @@ $(document).ready(function () {
         winTally++;
         $("#wins").html(winTally);
         alert("You win!");
-        $("#finalTotal").text("");
+        $("#finalTotal").text(currentScore);
         reset();
     }
 
@@ -109,7 +103,7 @@ $(document).ready(function () {
         lossTally++;
         $("#loss").html(lossTally);
         alert("Your total score went over!");
-        $("#finalTotal").text("");
+        $("#finalTotal").text(currentScore);
         reset();
     }
 

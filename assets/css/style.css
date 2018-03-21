@@ -1,0 +1,104 @@
+
+body {
+    background-image: url("../images/library-background.jpg");
+}
+
+* {
+color: white;
+}
+.heading {
+    color: white;
+    margin-left: 30px;
+}
+
+div.col-md-4 {
+    float: left;
+    display: block;
+    align-content: center;
+    width: 200px;
+}
+
+.numToMatch, #randomNumber, .currentScore, #finalTotal{
+    font-size: 40px;
+    text-align: left;
+    margin-left: 30px;
+}
+#instruction {
+    margin-top: 30px;  
+        border-style: groove;
+        border-radius: 25px;
+        border-color: 10px rgb(189, 142, 142);
+        background-position: left top;
+        background-repeat: repeat;
+        padding: 20px; 
+        width: 600px;
+        height: 300px;
+}
+
+.books {
+    align-content: center;
+    margin-top: 30px;
+
+}
+
+.content {
+    margin: 0px 60px;
+}
+.heading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: unset;
+    font-size: 50px;
+    text-align: center;
+
+}
+h3 {
+    font-size: 20px;
+    text-align: justify
+}
+#wins, #loss {
+    float : right;
+}
+li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 30px;
+
+}
+#picture-row {
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}
+
+.loss, .wins, #loss, #wins {
+    font-size: 30px;
+    margin-right: 20px;
+
+}
+#wins {
+    margin-left: 20px;
+}
+
+.books {
+    align-items: center; 
+}
+
+#scoreboard {
+    margin-left: 80px;
+    margin-top: 30px;
+    border-style: groove;
+    border-radius: 25px;
+    border-color: 10px rgb(189, 142, 142);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px; 
+    width: 200px;
+    height: 300px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    
+}
